@@ -29,9 +29,10 @@ const Button = styled.button`
 `;
 
 const Square = props => {
+  const { value, onClick } = props;
   return (
-    <Button onClick={props.onClick} border={"1px dashed #d3d3d3"}>
-      {props.value}
+    <Button onClick={onClick} border={"1px dashed #d3d3d3"}>
+      {value}
     </Button>
   );
 };
