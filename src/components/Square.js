@@ -26,25 +26,14 @@ const Button = styled.button`
     outline: none;
     box-shadow: 0 1px 6px rgba(103, 114, 229, 0.5);
   }
-`
+`;
 
-const Square = (props) => {
+const Square = props => {
   return (
-    <button className="square" onClick={props.onClick}>
-      {props.value}
-    </button>
-  );
-}
-
-const StyledSquare = (props) => {
-  return (
-    <Button onClick={props.onClick} border={'1px dashed #d3d3d3'}>
+    <Button onClick={props.onClick} border={"1px dashed #d3d3d3"}>
       {props.value}
     </Button>
   );
-}
-
-export {
-  Square,
-  StyledSquare
 };
+
+export default Square;
