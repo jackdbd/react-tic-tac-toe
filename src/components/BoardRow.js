@@ -15,11 +15,11 @@ const Div = styled.div`
 `;
 
 const BoardRow = props => {
-  const { indexStart, squares, onClick } = props;
+  const { indexStart, cells, onClick } = props;
   const BoardCellList = [0, 1, 2].map(index => {
     const i = indexStart + index;
     return (
-      <BoardCell key={index} value={squares[i]} onClick={() => onClick(i)} />
+      <BoardCell key={index} value={cells[i]} onClick={() => onClick(i)} />
     );
   });
   return <Div>{BoardCellList}</Div>;
