@@ -1,5 +1,9 @@
+/**
+ * BoardRow module.
+ * @module /components/BoardRow
+ */
 import React from "react";
-import Square from "./Square";
+import BoardCell from "./BoardCell";
 import styled from "styled-components";
 
 const Div = styled.div`
@@ -12,11 +16,13 @@ const Div = styled.div`
 
 const BoardRow = props => {
   const { indexStart, squares, onClick } = props;
-  const squareList = [0, 1, 2].map(index => {
+  const BoardCellList = [0, 1, 2].map(index => {
     const i = indexStart + index;
-    return <Square key={index} value={squares[i]} onClick={() => onClick(i)} />;
+    return (
+      <BoardCell key={index} value={squares[i]} onClick={() => onClick(i)} />
+    );
   });
-  return <Div>{squareList}</Div>;
+  return <Div>{BoardCellList}</Div>;
 };
 
 export default BoardRow;

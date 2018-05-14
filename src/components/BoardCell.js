@@ -1,8 +1,8 @@
 /**
- * Square module.
- * Even if Square is a functional component, React stil needs to be available in
+ * BoardCell module.
+ * Even if this is a functional component, React stil needs to be available in
  * scope when using JSX, so we need to import it.
- * @module /components/Square
+ * @module /components/BoardCell
  */
 import React from "react";
 import styled from "styled-components";
@@ -20,6 +20,7 @@ const Button = styled.button`
   padding: 0;
   text-align: center;
   width: 34px;
+  border-radius: 15px;
 
   &:focus {
     border-color: #6772e5;
@@ -28,7 +29,7 @@ const Button = styled.button`
   }
 `;
 
-const Square = props => {
+const BoardCell = props => {
   const { value, onClick } = props;
   return (
     <Button onClick={onClick} border={"1px dashed #d3d3d3"}>
@@ -37,4 +38,4 @@ const Square = props => {
   );
 };
 
-export default Square;
+export default BoardCell;
