@@ -1,7 +1,7 @@
 /**
  * Square module.
  * Even if Square is a functional component, React stil needs to be available in
- * scope, so we need to import it.
+ * scope when using JSX, so we need to import it.
  * @module /components/Square
  */
 import React from "react";
