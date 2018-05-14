@@ -16,9 +16,10 @@ const DivStatus = styled.div`
   margin-bottom: 20px;
 `;
 
-const Ol = styled.ol`
-  padding-left: 30px;
-  padding-right: 10px;
+const Ul = styled.ul`
+  padding-left: 1em;
+  padding-right: 1em;
+  list-style-type: none;
 `;
 
 const Info = props => {
@@ -26,7 +27,7 @@ const Info = props => {
   return (
     <Div>
       <DivStatus>{status}</DivStatus>
-      <Ol>{moves}</Ol>
+      <Ul>{moves}</Ul>
     </Div>
   );
 };
