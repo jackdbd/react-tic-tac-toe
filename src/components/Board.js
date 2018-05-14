@@ -3,12 +3,12 @@
  * @module /components/Board
  */
 import React, { Component } from "react";
-import { Square } from "./Square";
+import { Square, StyledSquare } from "./Square";
 
 class Board extends Component {
   renderSquare(i) {
     return (
-      <Square
+      <StyledSquare
         value={this.props.squares[i]}
         onClick={() => this.props.onClick(i)}
       />
