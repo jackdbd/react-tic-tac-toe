@@ -1,6 +1,13 @@
 import React, { Component } from "react";
+import styled from "styled-components";
 import Board from "./Board";
+import Info from "./Info";
 import { calculateWinner } from "../utils";
+
+const Div = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 
 class Game extends Component {
   constructor(props) {
@@ -64,15 +71,10 @@ class Game extends Component {
     }
 
     return (
-      <div className="game">
-        <div className="game-board">
-          <Board cells={current.cells} onClick={i => this.handleClick(i)} />
-        </div>
-        <div className="game-info">
-          <div>{status}</div>
-          <ol>{moves}</ol>
-        </div>
-      </div>
+      <Div>
+        <Board cells={current.cells} onClick={i => this.handleClick(i)} />
+        <Info status={status} moves={moves} />
+      </Div>
     );
   }
 }
