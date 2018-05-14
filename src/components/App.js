@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Title from "./Title";
 import Game from "./Game";
+import "../theme/globalStyle";
 
 class App extends Component {
   render() {

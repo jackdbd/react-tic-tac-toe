@@ -11,7 +11,7 @@ const Div = styled.div`
 `;
 
 const DivStatus = styled.div`
-  font: 24px "Times new Roman";
+  font: 24px "Lobster";
   background-color: steelblue;
   margin-bottom: 20px;
 `;
