@@ -1,4 +1,5 @@
 # react-tic-tac-toe
+[![Build Status](https://travis-ci.org/jackdbd/react-tic-tac-toe.svg?branch=master)](https://travis-ci.org/jackdbd/react-tic-tac-toe) [![Greenkeeper badge](https://badges.greenkeeper.io/jackdbd/react-tic-tac-toe.svg)](https://greenkeeper.io/) [![Code Health](https://landscape.io/github/jackdbd/react-tic-tac-toe/master/landscape.svg?style=flat)](https://landscape.io/github/jackdbd/react-tic-tac-toe/master)
 
 A Tic Tac Toe app built with:
 
