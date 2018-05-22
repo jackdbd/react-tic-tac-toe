@@ -8,9 +8,9 @@
     "test": "react-scripts test --env=jsdom",
     "test:verbose": "react-scripts test --env=jsdom --verbose",
     "eject": "react-scripts eject",
-    "cov": "codecov",
+    "coverage": "codecov",
     "lint": "prettier --write '{,!(node_modules)/}**/*.{js,jsx}'",
-    "ci": "npm-run-all --sequential test:verbose cov"
+    "ci": "npm-run-all --sequential test:verbose coverage"
   },
   "dependencies": {
     "d3": "^5.4.0",

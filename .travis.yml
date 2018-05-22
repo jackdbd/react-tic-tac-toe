@@ -8,3 +8,9 @@ install:
   - yarn
 script:
   - yarn run ci
+# after_success:
+  # - codecov
+notifications:
+  email:
+    on_success: change
+    on_failure: always
