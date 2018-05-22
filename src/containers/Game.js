@@ -12,7 +12,9 @@ const Div = styled.div`
   flex-direction: row;
 `;
 
-class Game extends Component {
+// we export the undecorated, redux-unaware component to test it without the redux store
+// https://redux.js.org/recipes/writing-tests
+export class Game extends Component {
   handleClick(iCell) {
     const { cells, player } = this.props;
     const winner = calculateWinner(cells);
