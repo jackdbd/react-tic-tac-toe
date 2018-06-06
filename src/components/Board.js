@@ -6,11 +6,15 @@ import React from "react";
 import BoardRow from "./BoardRow";
 
 const Board = props => {
+  const { status, cells, onClick } = props;
   return (
-    <div>
-      <BoardRow indexStart={0} cells={props.cells} onClick={props.onClick} />
-      <BoardRow indexStart={3} cells={props.cells} onClick={props.onClick} />
-      <BoardRow indexStart={6} cells={props.cells} onClick={props.onClick} />
+    <div className="row" style={{ backgroundColor: "orange" }}>
+      <div className="col s12" style={{ backgroundColor: "red" }}>
+        <h3>{status}</h3>
+        <BoardRow indexStart={0} cells={cells} onClick={onClick} />
+        <BoardRow indexStart={3} cells={cells} onClick={onClick} />
+        <BoardRow indexStart={6} cells={cells} onClick={onClick} />
+      </div>
     </div>
   );
 };

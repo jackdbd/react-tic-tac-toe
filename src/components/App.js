@@ -1,14 +1,22 @@
 import React, { Component } from "react";
-import Title from "./Title";
+import Header from "./Header";
 import Game from "../containers/Game";
+import Footer from "./Footer";
 import "../theme/globalStyle";
+import "../../node_modules/materialize-css/dist/css/materialize.min.css";
+import "./App.css";
 
 class App extends Component {
   render() {
+    const primaryColor = "deep-purple darken-4";
+    // const secondaryColor = "blue darken-1";
     return (
-      <div>
-        <Title>React Tic Tac Toe</Title>
-        <Game />
+      <div className="app container">
+        <Header text={"Tic-Tac-Toe"} primaryColor={primaryColor} />
+        <div className="app-content">
+          <Game />
+        </div>
+        <Footer primaryColor={primaryColor} />
       </div>
     );
   }

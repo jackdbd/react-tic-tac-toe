@@ -1,0 +1,9 @@
+.btn.waves-effect {
+    height: auto;
+    width: 100%;
+    min-height: 20px;
+    line-height: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: left;
+}
