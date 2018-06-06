@@ -11,7 +11,7 @@
     "eject": "react-scripts eject",
     "coverage": "codecov",
     "lint": "prettier --write '{,!(node_modules)/}**/*.{js,jsx}'",
-    "ci": "test:verbose && coverage",
+    "ci": "npm run test:verbose && coverage",
     "deploy": "npm run build && gh-pages -d build"
   },
   "dependencies": {

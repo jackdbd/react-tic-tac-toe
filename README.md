@@ -1,5 +1,5 @@
 # react-tic-tac-toe
-[![Build Status](https://travis-ci.org/jackdbd/react-tic-tac-toe.svg?branch=master)](https://travis-ci.org/jackdbd/react-tic-tac-toe) [![codecov](https://codecov.io/gh/jackdbd/react-tic-tac-toe/branch/master/graph/badge.svg)](https://codecov.io/gh/jackdbd/react-tic-tac-toe)
+[![Build Status](https://travis-ci.org/jackdbd/react-tic-tac-toe.svg?branch=master)](https://travis-ci.org/jackdbd/react-tic-tac-toe) [![codecov](https://codecov.io/gh/jackdbd/react-tic-tac-toe/branch/master/graph/badge.svg)](https://codecov.io/gh/jackdbd/react-tic-tac-toe) [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovateapp.com/)
 
 A Tic Tac Toe app built with:
 
@@ -7,7 +7,7 @@ A Tic Tac Toe app built with:
 - Redux
 - Materialize CSS
 
-Play [here](https://jackdbd.github.io/react-tic-tac-toe)!.
+Play [here](https://jackdbd.github.io/react-tic-tac-toe)!
 
 
 # Installation
