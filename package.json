@@ -13,7 +13,8 @@
     "coverage": "codecov",
     "lint": "prettier --write '{,!(node_modules)/}**/*.{js,jsx}'",
     "ci": "yarn run test && yarn run coverage",
-    "deploy": "yarn run build && gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "d3": "5.4.0",
