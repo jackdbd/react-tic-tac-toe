@@ -12,7 +12,7 @@
     "eject": "react-scripts eject",
     "coverage": "codecov",
     "lint": "prettier --write '{,!(node_modules)/}**/*.{js,jsx}'",
-    "ci": "yarn run test && coverage",
+    "ci": "yarn run test && yarn run coverage",
     "deploy": "yarn run build && gh-pages -d build"
   },
   "dependencies": {
