@@ -13,17 +13,18 @@ const Ul = styled.ul`
 
 const renderTurns = (history, jumpToTurn) => {
   const turns = history.map((d, i) => {
-    return <Turn i={i} player={d.player} jumpToTurn={jumpToTurn} />;
+    return <Turn key={i} i={i} player={d.player} jumpToTurn={jumpToTurn} />;
   });
   return turns;
 };
 
 const Info = props => {
-  const { history, jumpToTurn } = props;
+  const history = props.history || [];
+  const jumpToTurn = props.jumpToTurn;
   return (
     <div className="row">
       <div className="col s12">
-        <Ul className="col s12">{renderTurns(history, jumpToTurn)}</Ul>
+        <Ul>{renderTurns(history, jumpToTurn)}</Ul>
       </div>
     </div>
   );

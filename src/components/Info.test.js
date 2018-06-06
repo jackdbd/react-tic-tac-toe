@@ -1,12 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { shallow, mount, render } from "enzyme";
 import Info from "./Info";
+import "../setupEnzymeTests";
 
 describe("Info component", () => {
-  it("renders without crashing", () => {
-    const div = document.createElement("div");
-    ReactDOM.render(<Info />, div);
+  it("should render without crashing", () => {
+    const wrapper = shallow(<Info />);
   });
+
   it("renders properly", () => {
     expect(<Info />).toMatchSnapshot();
   });

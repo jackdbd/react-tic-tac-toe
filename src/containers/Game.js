@@ -6,12 +6,7 @@ import Info from "../components/Info";
 import { calculateWinner } from "../utils";
 import { makeMove, jumpToTurn } from "../actions";
 
-/*
-  We export the undecorated, redux-unaware component to test it without the
-  redux store.
-  https://redux.js.org/recipes/writing-tests
-*/
-export class Game extends Component {
+class Game extends Component {
   handleClick(iCell) {
     const { cells, player, makeMove } = this.props;
     const winner = calculateWinner(cells);
@@ -21,7 +16,14 @@ export class Game extends Component {
   }
 
   render() {
-    const { history, cells, player, jumpToTurn } = this.props;
+    const {
+      history,
+      cells,
+      numRows,
+      numColumns,
+      player,
+      jumpToTurn
+    } = this.props;
     const winner = calculateWinner(cells);
     const status = winner ? `Player ${player} loses!` : `It's up to ${player}!`;
 
@@ -31,6 +33,8 @@ export class Game extends Component {
           <Board
             status={status}
             cells={cells}
+            numRows={numRows}
+            numColumns={numColumns}
             onClick={i => this.handleClick(i)}
           />
         </div>
@@ -51,4 +55,11 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({ makeMove, jumpToTurn }, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Game);
+const GameWithRedux = connect(mapStateToProps, mapDispatchToProps)(Game);
+
+/*
+  We export also the undecorated, redux-unaware component to test it without
+  the redux store.
+  https://redux.js.org/recipes/writing-tests
+*/
+export { Game, GameWithRedux };

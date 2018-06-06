@@ -1,9 +1,14 @@
 import { START_AGAIN, MAKE_MOVE, JUMP_TO_TURN } from "../actions";
 import { X, O } from "../symbols";
 
+const NUM_ROWS = 3;
+const NUM_COLUMNS = 3;
+
 export const initialState = {
   player: X,
-  cells: Array(9).fill(null),
+  cells: Array(NUM_ROWS * NUM_COLUMNS).fill(null),
+  numRows: NUM_ROWS,
+  numColumns: NUM_COLUMNS,
   history: []
 };
 

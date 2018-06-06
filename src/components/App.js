@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Header from "./Header";
-import Game from "../containers/Game";
+import { GameWithRedux } from "../containers/Game";
 import Footer from "./Footer";
-import "../theme/globalStyle";
+// import "../theme/globalStyle";
 import "../../node_modules/materialize-css/dist/css/materialize.min.css";
 import "./App.css";
 
@@ -14,7 +14,7 @@ class App extends Component {
       <div className="app container">
         <Header text={"Tic-Tac-Toe"} primaryColor={primaryColor} />
         <div className="app-content">
-          <Game />
+          <GameWithRedux />
         </div>
         <Footer primaryColor={primaryColor} />
       </div>

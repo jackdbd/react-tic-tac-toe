@@ -15,12 +15,12 @@ const Button = styled.button`
   font-size: 24px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
+  height: 2em;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 100%;
   border-radius: 15px;
 
   &:focus {
@@ -33,9 +33,11 @@ const Button = styled.button`
 const BoardCell = props => {
   const { value, onClick } = props;
   return (
-    <Button onClick={onClick} border={"1px dashed #d3d3d3"}>
-      {value}
-    </Button>
+    <div className="col s4">
+      <Button onClick={onClick} border={"1px dashed #d3d3d3"}>
+        {value}
+      </Button>
+    </div>
   );
 };
 
