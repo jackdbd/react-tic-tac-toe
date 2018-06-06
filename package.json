@@ -6,13 +6,14 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
     "test:verbose": "react-scripts test --env=jsdom --verbose",
+    "test:watch": "react-scripts test --env=jsdom",
+    "test": "CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "coverage": "codecov",
     "lint": "prettier --write '{,!(node_modules)/}**/*.{js,jsx}'",
-    "ci": "npm run test:verbose && coverage",
-    "deploy": "npm run build && gh-pages -d build"
+    "ci": "yarn run test && coverage",
+    "deploy": "yarn run build && gh-pages -d build"
   },
   "dependencies": {
     "d3": "^5.4.0",
