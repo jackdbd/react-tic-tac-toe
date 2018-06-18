@@ -8,7 +8,7 @@ const Footer = props => {
     <footer className={className}>
       <div className="container">
         <div className="row">
-          <div className="col l6 s12">
+          <div className="col s12 m6">
             <h5 className="white-text">About</h5>
             <span className="grey-text text-lighten-4">
               Code:{" "}
@@ -53,7 +53,7 @@ const Footer = props => {
               </a>
             </span>
           </div>
-          <div className="col l4 offset-l2 s12">
+          <div className="col s12 m6">
             <h5 className="white-text">Built with</h5>
             <ul>
               <li>

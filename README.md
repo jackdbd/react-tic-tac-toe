@@ -6,8 +6,10 @@ A Tic Tac Toe app built with:
 - React
 - Redux
 - Materialize CSS
+- CSS Flexbox (only for the sticky footer)
+- CSS Grid
 
-Play [here](https://jackdbd.github.io/react-tic-tac-toe)!
+Clike [here](https://jackdbd.github.io/react-tic-tac-toe) to play!
 
 
 # Installation

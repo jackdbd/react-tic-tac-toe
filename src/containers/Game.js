@@ -22,24 +22,32 @@ class Game extends Component {
       numRows,
       numColumns,
       player,
-      jumpToTurn
+      jumpToTurn,
+      primaryColor,
+      secondaryColor
     } = this.props;
     const winner = calculateWinner(cells);
     const status = winner ? `Player ${player} loses!` : `It's up to ${player}!`;
 
     return (
       <div className="row">
-        <div className="col s12 m8">
+        <div className="col s12 m6 l3 offset-l3">
           <Board
             status={status}
             cells={cells}
             numRows={numRows}
             numColumns={numColumns}
             onClick={i => this.handleClick(i)}
+            primaryColor={primaryColor}
+            secondaryColor={secondaryColor}
           />
         </div>
-        <div className="col s12 m4">
-          <Info history={history} jumpToTurn={jumpToTurn} />
+        <div className="col s12 m6 l3">
+          <Info
+            history={history}
+            jumpToTurn={jumpToTurn}
+            secondaryColor={secondaryColor}
+          />
         </div>
       </div>
     );

@@ -7,35 +7,41 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import BlankSymbol from "./BlankSymbol";
+import OSymbol from "./OSymbol";
+import XSymbol from "./XSymbol";
 
 const Button = styled.button`
-  background-color: #fff;
-  border: ${props => props.border};
-  float: left;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 34px;
-  height: 2em;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
+  background-color: ${props => props.primaryColor};
   text-align: center;
   width: 100%;
-  border-radius: 15px;
+  border-radius: 10px;
 
   &:focus {
-    border-color: #6772e5;
+    background-color: ${props => props.primaryColor};
+    border-color: ${props => props.secondaryColor};
     outline: none;
-    box-shadow: 0 1px 6px rgba(103, 114, 229, 0.5);
   }
 `;
 
 const BoardCell = props => {
-  const { value, onClick } = props;
+  const { value, onClick, primaryColor, secondaryColor } = props;
+  let Symbol;
+  if (value === "X") {
+    Symbol = XSymbol;
+  } else if (value === "O") {
+    Symbol = OSymbol;
+  } else {
+    Symbol = BlankSymbol;
+  }
   return (
-    <div className="col s4">
-      <Button onClick={onClick} border={"1px dashed #d3d3d3"}>
-        {value}
+    <div>
+      <Button
+        onClick={onClick}
+        primaryColor={primaryColor}
+        secondaryColor={secondaryColor}
+      >
+        <Symbol />
       </Button>
     </div>
   );
