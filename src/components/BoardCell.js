@@ -6,10 +6,17 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import { fadeIn } from "react-animations";
 import BlankSymbol from "./BlankSymbol";
 import OSymbol from "./OSymbol";
 import XSymbol from "./XSymbol";
+
+const animation = keyframes`${fadeIn}`;
+
+const AnimatedDiv = styled.div`
+  animation: 1.5s ${animation};
+`;
 
 const Button = styled.button`
   background-color: ${props => props.primaryColor};
@@ -35,21 +42,23 @@ const BoardCell = props => {
     Symbol = BlankSymbol;
   }
   return (
-    <div>
+    <AnimatedDiv>
       <Button
         onClick={onClick}
         primaryColor={primaryColor}
         secondaryColor={secondaryColor}
       >
-        <Symbol />
+        <Symbol stroke={"#000"} />
       </Button>
-    </div>
+    </AnimatedDiv>
   );
 };
 
 BoardCell.propTypes = {
   value: PropTypes.string,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
+  primaryColor: PropTypes.string.isRequired,
+  secondaryColor: PropTypes.string.isRequired
 };
 
 export default BoardCell;
