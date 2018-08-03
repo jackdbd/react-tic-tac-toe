@@ -17,22 +17,22 @@
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
-    "d3": "5.4.0",
+    "d3": "5.5.0",
     "materialize-css": "0.100.2",
-    "react": "16.3.2",
-    "react-animations": "^1.0.0",
-    "react-dom": "16.3.2",
+    "react": "16.4.2",
+    "react-animations": "1.0.0",
+    "react-dom": "16.4.2",
     "react-redux": "5.0.7",
     "react-scripts": "1.1.4",
     "redux": "4.0.0",
-    "redux-devtools-extension": "2.13.2",
-    "styled-components": "3.2.6"
+    "redux-devtools-extension": "2.13.5",
+    "styled-components": "3.4.0"
   },
   "devDependencies": {
-    "codecov": "3.0.2",
+    "codecov": "3.0.4",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
     "gh-pages": "1.2.0",
-    "prettier": "1.12.1"
+    "prettier": "1.14.0"
   }
 }

@@ -63,7 +63,10 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({ makeMove, jumpToTurn }, dispatch);
 }
 
-const GameWithRedux = connect(mapStateToProps, mapDispatchToProps)(Game);
+const GameWithRedux = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Game);
 
 /*
   We export also the undecorated, redux-unaware component to test it without
